@@ -1,0 +1,26 @@
+{
+  "name": "mozlz4",
+  "version": "0.1.0",
+  "description": "Decompress Mozilla Firefox bookmarks backup files.",
+  "main": "index.js",
+  "bin": {
+    "mozlz4": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "jsonlz4",
+    "json",
+    "bookmarks",
+    "firefox",
+    "lz4"
+  ],
+  "author": "Tobias Schmid <toashd@gmail.com> (https://github.com/toashd)",
+  "license": "MIT",
+  "repository": "toashd/mozlz4",
+  "dependencies": {
+    "commander": "^2.13.0",
+    "lz4": "^0.5.3"
+  }
+}
