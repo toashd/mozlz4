@@ -18,7 +18,7 @@ const jsonlz4 = require('mozlz4');
 // Read file into buffer
 fs.readFile('/path/to/bookmarkbackups/recovery.jsonlz4', function(err, fileBuffer) {
   // decompress file buffer to JSON
-  decompressedJson = mozlz4.decompress(fileBuffer);
+  decompressedJson = jsonlz4.decompress(fileBuffer);
 
   // do something with the JSON
   console.log(decompressedJson);
