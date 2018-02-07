@@ -20,8 +20,6 @@ const magicNumber = "mozLz40\0";
  * @returns {JSON}
  */
 let decompress = (inputBuffer) => {
-    var outputBuffer;
-
     // Verify inputBuffer
     if (!Buffer.isBuffer(inputBuffer)) {
         throw new Error('input is not of type Buffer');
@@ -34,8 +32,7 @@ let decompress = (inputBuffer) => {
         return false;
     }
 
-    outputBuffer = new Buffer(inputBuffer.readUInt32LE(8));
-
+    let outputBuffer = new Buffer(inputBuffer.readUInt32LE(8));
     lz4.decodeBlock(inputBuffer, outputBuffer, 12);
 
     return JSON.parse(outputBuffer.toString());
