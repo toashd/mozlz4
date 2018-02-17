@@ -38,8 +38,9 @@ let decompress = (inputBuffer) => {
     return JSON.parse(outputBuffer.toString());
 };
 
-// Export node module
-module.exports = decompress;
+module.exports = {
+    decompress: decompress
+};
 
 if (require.main === module) {
     // Set up commandline parameters
